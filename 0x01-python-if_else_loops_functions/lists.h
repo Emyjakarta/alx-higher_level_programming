@@ -2,5 +2,6 @@
 #define LISTS_H
 
 def islower(c):
+def uppercase(s):
 	
 #endif /*LISTS_H*/
