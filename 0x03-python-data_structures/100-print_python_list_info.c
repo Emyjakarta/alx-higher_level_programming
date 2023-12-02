@@ -1,7 +1,8 @@
 #include <Python.h>
 #include <stdio.h>
 /**
- * print_python_list_info-C function that prints some basic info about Python lists
+ * print_python_list_info-C function that prints
+ * some basic info about Python lists
  * @p: python object
  * Return: void
  */
