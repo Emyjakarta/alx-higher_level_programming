@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# define a square that does nothing
 
 
 class Square:
