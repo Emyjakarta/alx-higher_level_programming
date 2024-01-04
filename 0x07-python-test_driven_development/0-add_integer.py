@@ -6,6 +6,7 @@ a must be an integer or b must be an integer
 a and b must be first casted to integers if they are float
 """
 
+
 def add_integer(a, b=98):
 
     """a function that adds 2 integers
