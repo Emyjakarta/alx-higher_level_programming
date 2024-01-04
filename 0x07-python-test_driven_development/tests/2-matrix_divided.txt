@@ -1,4 +1,11 @@
-"""Tests for a function that divides all elements of a matrix"""
+=============================================================
+Tests for a function that divides all elements of a matrix
+=============================================================
+
+`matrix_divided(matrix, div)` function that divides all elements of a matrix
+
+
+
     Examples:
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
