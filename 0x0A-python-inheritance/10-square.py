@@ -34,3 +34,14 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         "return the rectangle description"
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+
+class Square(Rectangle):
+    """class Rectangle that inherits from BaseGeometry
+    (7-base_geometry.py). (task based on 8-rectangle.py)
+    """
+    def __init__(self, size):
+        "initialize the square"
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
