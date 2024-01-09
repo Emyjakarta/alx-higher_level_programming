@@ -9,8 +9,5 @@ def read_file(filename=""):
     You don’t need to manage file permission
     or file doesn't exist exceptions.
     """
-    try:
-        with open(filename, encoding='utf-8') as file:
-            print(file.read(), end='')
-    except FileNotFoundError:
-        pass
+    with open(filename, encoding='utf-8') as file:
+        print(file.read(), end='')
