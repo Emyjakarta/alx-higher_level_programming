@@ -6,7 +6,7 @@ s_my_list = to_json_string(my_list)
 print(s_my_list)
 print(type(s_my_list))
 
-my_dict = { 
+my_dict = {
         'id': 12,
         'name': "John",
         'places': [ "San Francisco", "Tokyo" ],
@@ -14,8 +14,8 @@ my_dict = {
         'info': {
             'age': 36,
             'average': 3.14
-            }
         }
+}
 s_my_dict = to_json_string(my_dict)
 print(s_my_dict)
 print(type(s_my_dict))
