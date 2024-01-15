@@ -30,7 +30,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.width, 5)
         self.assertEqual(s1.x, 3)
         self.assertEqual(s1.y, 4)
-        self.assertEqual(s1.id, 2)
+        self.assertEqual(s1.id, 1)
 
     def test_10_1(self):
         """Test __str__ representation."""

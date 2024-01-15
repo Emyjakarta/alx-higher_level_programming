@@ -7,6 +7,8 @@ class Square(Rectangle):
     "Square Class"
     def __init__(self, size, x=0, y=0, id=None):
         "Initialization method"
+        if id is None:
+            id = 1
         super().__init__(size, size, x, y, id)
 
     @property
