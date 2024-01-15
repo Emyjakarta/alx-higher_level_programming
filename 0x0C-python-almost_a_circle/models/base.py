@@ -40,7 +40,7 @@ class Base:
         if not json_string:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         " Create an instance with all attributes set "
@@ -53,7 +53,7 @@ class Base:
 
         dummy_instance.update(**dictionary)
         return dummy_instance
-    
+
     @classmethod
     def load_from_file(cls):
         """Returns a list of instances"""
