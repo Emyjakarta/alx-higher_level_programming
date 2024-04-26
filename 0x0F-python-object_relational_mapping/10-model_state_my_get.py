@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""script that prints State objects that contains the letter `a` from the
+"""script that prints State object with the name passed as argument from the
 `hbtn_0e_6_usa` database"""
 
 import sys
@@ -9,8 +9,8 @@ from sqlalchemy.orm import Session
 from model_state import Base, State
 
 
-def retrieve_state_with_letter_a(
-    username: str, password: str, database: str
+def retrieve_state_with_name(
+    username: str, password: str, database: str, state_name: str
 ) -> None:
     """Lists the State objects that contains the letter `a` in a database.
 
@@ -18,6 +18,7 @@ def retrieve_state_with_letter_a(
         username (str): The username for the connection.
         password (str): The password of the user.
         database (str): The database to connect to.
+        state_name (str): The name of the state to search.
     """
     engine = create_engine(
         f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
@@ -26,21 +27,20 @@ def retrieve_state_with_letter_a(
     Base.metadata.create_all(engine)
 
     with Session(engine) as session:
-        state_with_a = (
-            session.query(State)
-            .order_by(State.id)
-            .filter(State.name.like("%a%"))
-        )
+        state = session.query(State).filter(State.name == state_name).first()
 
-        for state in state_with_a:
-            print(f"{state.id}: {state.name}")
+        if state:
+            print(f"{state.id}")
+        else:
+            print("Not found")
 
 
 if __name__ == "__main__":
     try:
-        retrieve_state_with_letter_a(sys.argv[1], sys.argv[2], sys.argv[3])
+        retrieve_state_with_name(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
     except IndexError:
         sys.stderr.write(
-            f"Usage: {sys.argv[0]} <username> <password> <db_name>\n"
+            f"Usage: {sys.argv[0]} <username> <password> "
+            "<database> <state name to search>\n"
         )
         sys.exit(1)

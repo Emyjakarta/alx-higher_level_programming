@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from model_state import Base, State
 
 
-def get_all_states(username: str, password: str, database: str) -> None:
+def retrieve_all_states(username: str, password: str, database: str) -> None:
     """Lists all State objects in a database
 
     Args:
@@ -32,7 +32,7 @@ def get_all_states(username: str, password: str, database: str) -> None:
 
 if __name__ == "__main__":
     try:
-        get_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
+        retrieve_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
     except IndexError:
         sys.stderr.write(
             f"Usage: {sys.argv[0]} <username> <password> <db_name>\n"

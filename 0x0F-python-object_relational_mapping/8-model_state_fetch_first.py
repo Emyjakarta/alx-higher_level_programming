@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from model_state import Base, State
 
 
-def get_first_state(username: str, password: str, database: str) -> None:
+def retrieve_first_state(username: str, password: str, database: str) -> None:
     """Lists the first State object in a database
 
     Args:
@@ -34,7 +34,7 @@ def get_first_state(username: str, password: str, database: str) -> None:
 
 if __name__ == "__main__":
     try:
-        get_first_state(sys.argv[1], sys.argv[2], sys.argv[3])
+        retrieve_first_state(sys.argv[1], sys.argv[2], sys.argv[3])
     except IndexError:
         sys.stderr.write(
             f"Usage: {sys.argv[0]} <username> <password> <db_name>\n"
