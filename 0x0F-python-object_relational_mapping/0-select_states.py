@@ -9,7 +9,8 @@ import sys
 
 def list_states(username: str, password: str, database: str) -> None:
     """
-    Connects to the MySQL server and lists all states from the specified database.
+    Connects to the MySQL server and lists all states
+    from the specified database.
 
     Args:
         username (str): MySQL username.
@@ -21,7 +22,7 @@ def list_states(username: str, password: str, database: str) -> None:
     """
     try:
         db = MySQLdb.connect(host="localhost", port=3306, user=username,
-                passwd=password, db=database, charset="utf8")
+                             passwd=password, db=database, charset="utf8")
         cur = db.cursor()
         cur.execute("SELECT * FROM states ORDER BY id ASC")
 
