@@ -37,7 +37,8 @@ def retrieve_state_with_name(
 
 if __name__ == "__main__":
     try:
-        retrieve_state_with_name(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+        retrieve_state_with_name(sys.argv[1], sys.argv[2],
+                                 sys.argv[3], sys.argv[4])
     except IndexError:
         sys.stderr.write(
             f"Usage: {sys.argv[0]} <username> <password> "
