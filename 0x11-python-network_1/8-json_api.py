@@ -16,7 +16,7 @@ if __name__ == "__main__":
     try:
         json_reply = reply.json()
         if json_reply:
-            print(f"[{json_response.get('id')}] {json_response.get('name')}")
+            print(f"[{json_reply.get('id')}] {json_reply.get('name')}")
         else:
             print("No result")
     except ValueError:
