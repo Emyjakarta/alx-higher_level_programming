@@ -10,6 +10,6 @@ if __name__ == "__main__":
         sys.stderr.write(f"Usage: {sys.argv[0]} <URL>\n")
         sys.exit(1)
 
-        url = sys.argv[1]
-        reply = requests.get(url)
-        print(reply.headers.get("X-Request-Id"))
+    url = sys.argv[1]
+    reply = requests.get(url)
+    print(reply.headers.get("X-Request-Id"))
