@@ -12,6 +12,6 @@ if __name__ == "__main__":
 
     reply = requests.get(sys.argv[1])
     if reply.status_code >= 400:
-        print(f"Error code: {response.status_code}")
+        print(f"Error code: {reply.status_code}")
     else:
-        print(response.text)
+        print(reply.text)
