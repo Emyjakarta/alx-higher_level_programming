@@ -5,8 +5,8 @@
 const fs = require('fs');
 
 if (process.argv.length !== 5) {
-	  console.log('Incorrect number of arguments');
-	  process.exit(1);
+  console.log('Incorrect number of arguments');
+  process.exit(1);
 }
 
 const file1 = process.argv[2];
