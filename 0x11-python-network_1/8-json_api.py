@@ -6,13 +6,13 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
-        i = sys.argv[1]
+        q = sys.argv[1]
     else:
-        i = ""
+        q = ""
 
     url = "http://0.0.0.0:5000/search_user"
 
-    reply = requests.post(url, data={"i": i})
+    reply = requests.post(url, data={"q": q})
     try:
         json_reply = reply.json()
         if json_reply:
