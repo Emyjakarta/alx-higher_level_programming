@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Script that prints all characters of a Star Wars movie
-// Character names are displayed in 
+// Character names are displayed in
 // the same order of the list “characters”
 // in the films response
 
