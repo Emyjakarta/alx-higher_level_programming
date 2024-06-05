@@ -5,7 +5,7 @@
 const fileSystem = require('fs');
 const path = require('path');
 
-function processCommandlineArguments() {
+function processCommandlineArguments () {
   if (process.argv.length !== 3) {
     console.error(`Usage: ${path.basename(process.argv[1])} <filename>`);
     return 1;
